@@ -24,10 +24,11 @@ I have only tested this method by imported the DNGs into lightroom and RapidRaw,
 - Add better error reporting
 - Add support for adding folders
 - Completely rework the UI, the current is only a functional POC
+- Switch from Adobe DNG Converter dependency to [DNGLab](https://github.com/dnglab/dnglab)
 - Add support for Linux and maybe MacOS
 - Add individual progress bars for files
 - Find a workaround for Adobe DNG Converter CLI refusing place the converted files into a seperate folder
 - Maybe support more RAW image formats
 
 Any support is welcome!
-[Donations:](https://ko-fi.com/aidant)
+Donations : [Ko-fi](https://ko-fi.com/aidant)
