@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://jfcjcesdbra3"]
+
+[node name="Control" type="Control" unique_id=889059108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QueueItem" type="HBoxContainer" parent="." unique_id=1453086742]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="QueueItem" unique_id=9248620]
+layout_mode = 2
+
+[node name="StatusIndicator" type="StatusIndicator" parent="QueueItem" unique_id=652655694]

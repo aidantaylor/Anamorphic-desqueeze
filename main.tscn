@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://x2gqxvxmsoqd"]
+
+[ext_resource type="Script" uid="uid://c3x6gi4sxvrym" path="res://Scripts/main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Control" unique_id=1021471252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1880088682]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Layout" unique_id=1132143817]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Layout" unique_id=1891250752]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Layout/Header" unique_id=1458399545]
+layout_mode = 2
+text = "DNG Desqueezer"
+
+[node name="Spacer2" type="Control" parent="Layout" unique_id=1627779183]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SettingPanel" type="VBoxContainer" parent="Layout" unique_id=1459385293]
+layout_mode = 2
+
+[node name="SettingsRow" type="HBoxContainer" parent="Layout/SettingPanel" unique_id=1686467]
+layout_mode = 2
+alignment = 1
+
+[node name="SqueezeSetting" type="VBoxContainer" parent="Layout/SettingPanel/SettingsRow" unique_id=1921698512]
+layout_mode = 2
+
+[node name="SqueezeLabel" type="Label" parent="Layout/SettingPanel/SettingsRow/SqueezeSetting" unique_id=1305315861]
+layout_mode = 2
+text = "Squeeze factor"
+horizontal_alignment = 1
+
+[node name="SqueezeInput" type="LineEdit" parent="Layout/SettingPanel/SettingsRow/SqueezeSetting" unique_id=450193146]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "1.33"
+
+[node name="Spacer" type="Control" parent="Layout/SettingPanel/SettingsRow" unique_id=1871272983]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="AxisSetting" type="VBoxContainer" parent="Layout/SettingPanel/SettingsRow" unique_id=1001646014]
+layout_mode = 2
+
+[node name="AxisLabel" type="Label" parent="Layout/SettingPanel/SettingsRow/AxisSetting" unique_id=1197679600]
+layout_mode = 2
+text = "Axis"
+horizontal_alignment = 1
+
+[node name="AxisInput" type="OptionButton" parent="Layout/SettingPanel/SettingsRow/AxisSetting" unique_id=1448831582]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Horizontal"
+popup/item_0/id = 0
+popup/item_1/text = "Vertical"
+popup/item_1/id = 1
+
+[node name="Spacer" type="Control" parent="Layout" unique_id=255534269]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="QueuedPanel" type="VBoxContainer" parent="Layout" unique_id=267110785]
+layout_mode = 2
+
+[node name="QueueHeader" type="HBoxContainer" parent="Layout/QueuedPanel" unique_id=1786048438]
+layout_mode = 2
+
+[node name="QueueTitle" type="Label" parent="Layout/QueuedPanel/QueueHeader" unique_id=1781997803]
+layout_mode = 2
+text = "Queue"
+
+[node name="Spacer" type="Control" parent="Layout/QueuedPanel/QueueHeader" unique_id=1653161907]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemCount" type="Label" parent="Layout/QueuedPanel/QueueHeader" unique_id=1272833292]
+layout_mode = 2
+text = "Items"
+
+[node name="Spacer4" type="Control" parent="Layout/QueuedPanel/QueueHeader" unique_id=590571837]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddFiles" type="Button" parent="Layout/QueuedPanel/QueueHeader" unique_id=1842747235]
+layout_mode = 2
+text = "Add Files"
+
+[node name="Spacer2" type="Control" parent="Layout/QueuedPanel/QueueHeader" unique_id=1256261343]
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddFolder" type="Button" parent="Layout/QueuedPanel/QueueHeader" unique_id=1060617182]
+layout_mode = 2
+text = "Add Folder"
+
+[node name="Spacer3" type="Control" parent="Layout/QueuedPanel/QueueHeader" unique_id=222312044]
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClearQueue" type="Button" parent="Layout/QueuedPanel/QueueHeader" unique_id=1878319397]
+layout_mode = 2
+text = "Clear Queue"
+
+[node name="QueueScroll" type="ScrollContainer" parent="Layout/QueuedPanel" unique_id=1388289716]
+custom_minimum_size = Vector2(0, 300)
+custom_maximum_size = Vector2(-1, 300)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="QueueList" type="VBoxContainer" parent="Layout/QueuedPanel/QueueScroll" unique_id=412675263]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="QueueCount" type="Label" parent="Layout/QueuedPanel/QueueScroll/QueueList" unique_id=657314163]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="Layout/QueuedPanel/QueueScroll/QueueList" unique_id=588272545]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Layout" unique_id=1767569449]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="Layout" unique_id=1114056752]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Status" type="Label" parent="Layout/BottomBar" unique_id=573542797]
+layout_mode = 2
+
+[node name="Spacer5" type="Control" parent="Layout/BottomBar" unique_id=1266453461]
+custom_minimum_size = Vector2(50, 0)
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Cancel" type="Button" parent="Layout/BottomBar" unique_id=798779482]
+layout_mode = 2
+text = "Cancel
+"
+
+[node name="Spacer4" type="Control" parent="Layout/BottomBar" unique_id=2090938222]
+custom_minimum_size = Vector2(50, 0)
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Start" type="Button" parent="Layout/BottomBar" unique_id=1655428388]
+layout_mode = 2
+text = "Start"
+
+[node name="Footer" type="HBoxContainer" parent="Layout" unique_id=1761311956]
+layout_mode = 2
+
+[node name="AboutInfo" type="LinkButton" parent="Layout/Footer" unique_id=2076537746]
+layout_mode = 2
+text = "About"
+
+[node name="AboutInfo" type="AcceptDialog" parent="Layout" unique_id=561988548]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(592, 161)
+exclusive = false
+
+[node name="AboutContent" type="VBoxContainer" parent="Layout/AboutInfo" unique_id=2104721331]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 584.0
+offset_bottom = 112.0
+
+[node name="AppName" type="Label" parent="Layout/AboutInfo/AboutContent" unique_id=1542521259]
+layout_mode = 2
+text = "DNG Desqueeze Tool"
+
+[node name="Description" type="Label" parent="Layout/AboutInfo/AboutContent" unique_id=577844796]
+layout_mode = 2
+text = "A simple utility for applying anamorphic desqueeze metadata to DNG files."
+
+[node name="Version" type="Label" parent="Layout/AboutInfo/AboutContent" unique_id=249552400]
+layout_mode = 2
+text = "	Version 0.5"
+
+[node name="GithubLink" type="LinkButton" parent="Layout/AboutInfo/AboutContent" unique_id=1052655417]
+layout_mode = 2
+text = "Github"
+uri = "https://github.com/aidantaylor/Anamorphic-desqueeze"
+
+[node name="OpenFiles" type="FileDialog" parent="Layout" unique_id=1718312336]
+oversampling_override = 1.0
+title = "Open File(s)"
+initial_position = 1
+exclusive = false
+file_mode = 1
+display_mode = 1
+access = 2
+root_subfolder = "C:/"
+
+[node name="OpenFolder" type="FileDialog" parent="Layout" unique_id=1637611502]
+oversampling_override = 1.0
+title = "Open a Directory"
+initial_position = 1
+exclusive = false
+file_mode = 2
+display_mode = 1
+access = 2
+root_subfolder = "C:/"
+
+[node name="StatusIndicator" type="Label" parent="Layout" unique_id=1689746393]
+layout_mode = 2

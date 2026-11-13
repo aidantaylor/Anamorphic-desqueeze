@@ -1,0 +1,5 @@
+res://main.tscn
+res://Scripts/main.gd
+res://Scripts/DngProcessor.gd
+res://QueueItem.tscn.tscn
+res://Scripts/RawConverter.gd
