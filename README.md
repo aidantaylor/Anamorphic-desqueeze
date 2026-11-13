@@ -2,6 +2,9 @@
 This is a very early version
 Desqueeze your DNGs for easier edditing, it was built in godot and uses both [Exiftool](https://github.com/exiftool/exiftool) for desqueezing and [Adobe DNG converter](https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html) to convert Canon CR3 files into DNGs before desqueezing them. This tool currently only works on windows.
 
+#Initial alpha Release
+The current alpha release currently only supports DNG and CR3 files
+
 # Dependencies
 - Requires Adobe DNG Converter installed at it's default location, get it [here](https://helpx.adobe.com/camera-raw/desktop/dng-and-file-formats/adobe-dng-converter.html)
 - [Exiftool](https://github.com/exiftool/exiftool) is bundled in the tools folder
@@ -27,3 +30,4 @@ I have only tested this method by imported the DNGs into lightroom and RapidRaw,
 - Maybe support more RAW image formats
 
 Any support is welcome!
+[Donations:](https://ko-fi.com/aidant)
